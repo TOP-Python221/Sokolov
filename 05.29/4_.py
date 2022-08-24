@@ -8,6 +8,7 @@ for i in vvod:
     res[i] = res.get(i, 1) + 1
 
 
+
 # Введите строку:
 # 1.py 1.py aux.h main.cpp functions.h main.cpp 2.py main.cpp
 # Вывод:

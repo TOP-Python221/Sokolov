@@ -14,4 +14,4 @@ print(*vivod)
 #Введите значение: cadabra
 #abra
 
-
+()
