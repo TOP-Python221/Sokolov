@@ -30,4 +30,3 @@ elif 0 <= num < 100:
     else:
         a *= 10
         print(nums[a], nums[b])
-        ()

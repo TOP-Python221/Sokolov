@@ -17,4 +17,3 @@ print(vvod, 'будет', count, 'очков')
 
 # Введите слово: bonjour
 # bonjour будет 10 очков
-()
