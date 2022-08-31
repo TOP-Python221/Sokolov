@@ -14,4 +14,10 @@ class Tetraedron:
     def surface(self):
         return self.edge**2 * sqrt(3)
 
-Tetraedron(5)
+    @edge.setter
+    def edge(self, value):
+        self._edge = value
+
+
+tet = Tetraedron(5)
+print(f'{tet.edge = :.2f}\t{tet.volume = :.2f}')
