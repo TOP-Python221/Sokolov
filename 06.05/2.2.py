@@ -21,3 +21,4 @@ while True:
             break
     else:
         print('Вы не угадали поробуте еще раз')
+
