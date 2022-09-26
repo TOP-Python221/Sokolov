@@ -12,4 +12,3 @@ print(por_v_grig(1823, 329))
 
 
 
-
