@@ -1,4 +1,4 @@
-n = list(map(int,input().split()))
+n = list(map(int, input().split()))
 print(n)
 s = []
 if len(n) <= 4:
