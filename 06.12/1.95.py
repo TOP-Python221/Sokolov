@@ -1,33 +1,20 @@
-def capitalize(s):
-    result = s
-    pos = 0
-    while pos < len(s) and result[pos] == ' ':
-        pos = pos + 1
-    if pos < len(s):
-        result = result[0:pos] + result[pos].upper() + result[pos + 1 : len(result)]
-    pos = 0
-    while pos < len(s):
-        if result[pos] == "." or result[pos] == "!" or result[pos] == "?":
-            pos = pos + 1
-            while pos < len(s) and result[pos] == " ":
-                pos = pos + 1
+def isspace(iter_text: iter) -> iter:
+    for s in iter_text:
+        if s.isspace():
+            yield s
+        else:
+            yield s.upper()
+            break
 
-        if pos < len(s):
-            result = result[0:pos] + result[pos].upper() + result[pos + 1 : len(result)]
-            pos = pos + 1
+def upper_text(text: str) -> iter:
+    iter_text = iter(text)
+    yield from isspace(iter_text)
+    for s in iter_text:
+        yield s
+        if s == '.':
+            yield from isspace(iter_text)
 
-    pos = 1
-    while pos < len(s) - 1:
-        if result[pos - 1] == " " and result[pos] == "i" and (result[pos + 1] == " " or result[pos + 1] == "." or
-                 result[pos + 1] == "!" or result[pos + 1] == "?" or
-                 result[pos + 1] == "'"):
-            pos = pos + 1
-    return result
+text = " what time do i haveto be there? what’s the address? this time i’ll try to be on time!"
+result = ''.join(upper_text(text))
 
-def main():
-    s = input("Введите текст: ")
-    capitalized = capitalize(s)
-    print(capitalized)
-
-main()
-
+print(result)
