@@ -1,6 +1,7 @@
 from math import sqrt
 
-class Tetraedron:
+
+class Tetrahedron:
     def __init__(self, edge: float):
         self.edge = edge
 
@@ -8,16 +9,20 @@ class Tetraedron:
     def edge(self) -> float:
         return self.edge
 
-    def volume(self) ->float:
+    @edge.setter
+    def edge(self, value):
+        self._edge = value
+
+    def volume(self) -> float:
         return self.edge**3 * sqrt(2) / 12
 
     def surface(self):
         return self.edge**2 * sqrt(3)
 
-    @edge.setter
-    def edge(self, value):
-        self._edge = value
 
-
-tet = Tetraedron(5)
+tet = Tetrahedron(5)
 print(f'{tet.edge = :.2f}\t{tet.volume = :.2f}')
+
+
+# ДОБАВИТЬ: примеры выполнения скрипта в закомментированном виде под меткой tests
+# tests:
